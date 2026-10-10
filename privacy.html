@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Privacy Policy · Wopezi</title>
+<style>
+  :root {
+    --bg:#EAF2FC; --card:#FFFFFF; --soft:#F1F6FE; --line:#D3E1F3;
+    --fg:#0F2038; --muted:#4E6584; --faint:#8094AF;
+    --indigo:#4F46E5; --cyan:#0891B2; --emerald:#059669; --amber:#D97706; --rose:#E11D48; --purple:#9333EA;
+    --hero1:#4F46E5; --hero2:#06B6D4; --shadow:0 10px 30px rgba(30,58,138,.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#090D16; --card:#0F172A; --soft:#0B1222; --line:#1E293B;
+      --fg:#E2E8F0; --muted:#94A3B8; --faint:#64748B;
+      --indigo:#818CF8; --cyan:#22D3EE; --emerald:#34D399; --amber:#FCD34D; --rose:#FB7185; --purple:#C084FC;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; }
+  .wrap { max-width:720px; margin:0 auto; padding:0 18px 56px; }
+
+  .hero { position:relative; overflow:hidden; margin:16px 0 18px; padding:26px 22px 22px; border-radius:26px; color:#fff;
+          background:radial-gradient(120% 140% at 100% 0%, rgba(34,211,238,.55) 0%, transparent 55%),
+                     radial-gradient(90% 120% at 0% 100%, rgba(147,51,234,.45) 0%, transparent 60%),
+                     linear-gradient(135deg, var(--hero1), #312E81 70%, #0F172A);
+          box-shadow:0 18px 40px rgba(79,70,229,.30); }
+  .hero::after { content:""; position:absolute; right:-40px; top:-40px; width:170px; height:170px; border-radius:50%;
+                 border:1.5px solid rgba(255,255,255,.18); box-shadow:0 0 0 22px rgba(255,255,255,.05), 0 0 0 46px rgba(255,255,255,.03); }
+  .brand { display:flex; align-items:center; gap:10px; margin-bottom:18px; position:relative; z-index:1; }
+  .logo { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; font-weight:900; font-size:19px;
+          background:linear-gradient(135deg,#6366F1,#06B6D4); border:1px solid rgba(255,255,255,.3); box-shadow:0 6px 16px rgba(6,182,212,.35); }
+  .brand b { display:block; font-size:15px; letter-spacing:.2px; }
+  .brand span { display:block; font-size:11.5px; color:#A5F3FC; }
+  .hero h1 { margin:0; font-size:30px; line-height:1.15; letter-spacing:-.4px; position:relative; z-index:1; }
+  .hero p { margin:8px 0 0; color:#E0E7FF; font-size:14px; position:relative; z-index:1; }
+  .date { display:inline-flex; align-items:center; gap:6px; margin-top:14px; padding:5px 11px; border-radius:999px; font-size:11.5px; font-weight:600;
+          background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); position:relative; z-index:1; }
+
+  .chips { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:18px; }
+  .chip { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:13px 12px; box-shadow:var(--shadow); }
+  .chip i { font-style:normal; display:grid; place-items:center; width:32px; height:32px; border-radius:10px; font-size:16px; margin-bottom:8px; }
+  .chip b { display:block; font-size:13px; }
+  .chip small { display:block; color:var(--muted); font-size:11.5px; line-height:1.4; }
+  .t-indigo { background:rgba(99,102,241,.14); } .t-cyan { background:rgba(6,182,212,.14); } .t-emerald { background:rgba(16,185,129,.14); }
+  .t-amber { background:rgba(245,158,11,.16); } .t-rose { background:rgba(244,63,94,.14); } .t-purple { background:rgba(168,85,247,.14); }
+
+  .toc { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:14px 16px; margin-bottom:18px; box-shadow:var(--shadow); }
+  .toc h3 { margin:0 0 8px; font-size:11px; letter-spacing:1.2px; text-transform:uppercase; color:var(--faint); }
+  .toc ol { margin:0; padding:0; list-style:none; columns:2; column-gap:14px; counter-reset:t; }
+  .toc li { counter-increment:t; break-inside:avoid; padding:3px 0; font-size:13.5px; }
+  .toc li::before { content:counter(t, decimal-leading-zero); color:var(--indigo); font-weight:800; font-size:11px; margin-right:7px; }
+  .toc a { color:var(--fg); text-decoration:none; }
+
+  .sec { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:18px 18px 14px; margin-bottom:12px; box-shadow:var(--shadow); scroll-margin-top:16px; }
+  .sec-head { display:flex; align-items:center; gap:11px; margin-bottom:6px; }
+  .num { flex:none; width:34px; height:34px; border-radius:11px; display:grid; place-items:center; font-weight:800; font-size:13px; color:#fff;
+         background:linear-gradient(135deg,#6366F1,#06B6D4); box-shadow:0 6px 14px rgba(99,102,241,.3); }
+  .sec h2 { margin:0; font-size:17.5px; letter-spacing:-.2px; }
+  .sec p { margin:8px 0; color:var(--fg); }
+  .sec ul { list-style:none; margin:8px 0; padding:0; }
+  .sec li { position:relative; padding:9px 12px 9px 34px; margin:7px 0; background:var(--soft); border:1px solid var(--line); border-radius:14px; font-size:14px; }
+  .sec li::before { content:""; position:absolute; left:13px; top:16px; width:8px; height:8px; border-radius:50%; background:linear-gradient(135deg,#6366F1,#06B6D4); }
+  .sec li b { color:var(--fg); }
+  .tag { display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.4px; padding:2px 8px; border-radius:999px; margin-left:6px; vertical-align:2px; }
+  .tag.ok { color:var(--emerald); background:rgba(16,185,129,.14); }
+  .tag.tap { color:var(--indigo); background:rgba(99,102,241,.14); }
+
+  .callout { display:flex; gap:11px; align-items:flex-start; padding:13px 14px; border-radius:16px; margin:10px 0 4px; font-size:14px; }
+  .callout i { font-style:normal; font-size:18px; line-height:1.3; }
+  .callout.info { background:rgba(99,102,241,.10); border:1px solid rgba(99,102,241,.28); }
+  .callout.good { background:rgba(16,185,129,.10); border:1px solid rgba(16,185,129,.28); }
+  .callout.warn { background:rgba(244,63,94,.09); border:1px solid rgba(244,63,94,.28); }
+
+  .foot { text-align:center; margin-top:26px; color:var(--faint); font-size:12.5px; }
+  .foot nav { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .foot nav a { text-decoration:none; color:var(--indigo); font-weight:600; font-size:13px; padding:7px 13px; border-radius:999px; background:var(--card); border:1px solid var(--line); }
+  .foot nav a.on { color:#fff; background:linear-gradient(135deg,#6366F1,#06B6D4); border-color:transparent; }
+  @media (max-width:420px) { .chips { grid-template-columns:1fr 1fr; } .chips .chip:last-child { grid-column:span 2; } .toc ol { columns:1; } .hero h1 { font-size:27px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="brand"><div class="logo">W</div><div><b>Wopezi</b><span>Multimedia Translation Platform</span></div></div>
+    <h1>Privacy Policy</h1>
+    <p>Your words, photos, recordings and documents stay on your iPhone. Here's exactly what Wopezi keeps and why.</p>
+    <div class="date">🗓 Effective October 10, 2026</div>
+  </header>
+
+  <div class="chips">
+    <div class="chip"><i class="t-emerald">📱</i><b>On-device</b><small>Content is processed and stored locally</small></div>
+    <div class="chip"><i class="t-indigo">🚫</i><b>No tracking</b><small>No ads, no IDFA, no data selling</small></div>
+    <div class="chip"><i class="t-amber">🔒</i><b>You're in control</b><small>Delete everything any time</small></div>
+  </div>
+
+  <nav class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#data">Data on your device</a></li>
+      <li><a href="#perm">Permissions</a></li>
+      <li><a href="#proc">How processing works</a></li>
+      <li><a href="#iap">In-app purchases</a></li>
+      <li><a href="#account">Log out &amp; deletion</a></li>
+      <li><a href="#kids">Children</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <div class="callout info"><i>💡</i><div>Wopezi is operated by <b>Wopezi</b> ("we", "us"). We don't run servers that receive your content, and we never sell or share personal data.</div></div>
+  <div style="height:12px"></div>
+
+  <section class="sec" id="data">
+    <div class="sec-head"><div class="num">01</div><h2>Information Stored on Your Device</h2></div>
+    <ul>
+      <li><b>Translation projects</b> — typed text, recognized text (OCR), speech transcripts, translations and your edits.</li>
+      <li><b>Source media</b> — working copies of the photos, videos, recordings and documents you choose. Originals in Photos or Files are never modified.</li>
+      <li><b>Saved outputs</b> — the TXT, SRT, MP4 or PDF files you decide to save.</li>
+      <li><b>Credit ledger</b> — your local credit balance, spend records and verified purchase identifiers.</li>
+      <li><b>Preferences</b> — language pair, default format, theme and session state.</li>
+    </ul>
+    <p>All of this lives in the app's private storage until you delete it.</p>
+  </section>
+
+  <section class="sec" id="perm">
+    <div class="sec-head"><div class="num">02</div><h2>Permissions</h2></div>
+    <ul>
+      <li><b>Camera</b><span class="tag tap">ON TAP</span><br>Only when you tap Capture Text in Camera Scan, to photograph printed text.</li>
+      <li><b>Photos</b><span class="tag tap">ON TAP</span><br>Only when you choose a photo or video to translate or subtitle.</li>
+      <li><b>Microphone &amp; Speech Recognition</b><span class="tag tap">ON TAP</span><br>Only when you tap Record Speech, or when a chosen video's audio is turned into subtitles. Apple's on-device speech services are used where available.</li>
+      <li><b>Notifications</b><span class="tag ok">OPTIONAL</span><br>Lets you know when an export finishes while Wopezi is in the background.</li>
+    </ul>
+    <div class="callout good"><i>✅</i><div>You can change any permission in iOS Settings. Wopezi does not track you across apps or websites and does not use advertising identifiers.</div></div>
+  </section>
+
+  <section class="sec" id="proc">
+    <div class="sec-head"><div class="num">03</div><h2>How Processing Works</h2></div>
+    <p>Translation, text recognition, subtitle generation and document export run on your device using bundled language packs and Apple system frameworks. Wopezi does <b>not</b> send your content to third-party AI or translation services.</p>
+  </section>
+
+  <section class="sec" id="iap">
+    <div class="sec-head"><div class="num">04</div><h2>In-App Purchases</h2></div>
+    <p>Credit packs are bought through Apple's App Store. Payment is handled entirely by Apple — we never see your payment details. Wopezi stores the transaction ID, product and granted amount locally to keep your balance accurate.</p>
+  </section>
+
+  <section class="sec" id="account">
+    <div class="sec-head"><div class="num">05</div><h2>Log Out, Delete Account &amp; Erase All App Data</h2></div>
+    <ul>
+      <li><b>Log Out</b> ends the local session. Projects, outputs and credits stay on the device.</li>
+      <li><b>Delete Account</b> and <b>Erase All App Data</b> permanently remove all local projects, media, outputs, preferences and your remaining credit balance.</li>
+    </ul>
+    <div class="callout warn"><i>⚠️</i><div>Deletion can't be undone, and remaining credits are lost.</div></div>
+  </section>
+
+  <section class="sec" id="kids">
+    <div class="sec-head"><div class="num">06</div><h2>Children</h2></div>
+    <p>Wopezi is not directed to children under 13 and does not knowingly collect personal information from children.</p>
+  </section>
+
+  <section class="sec" id="changes">
+    <div class="sec-head"><div class="num">07</div><h2>Changes to This Policy</h2></div>
+    <p>We may update this policy. The effective date above shows the latest version, and updates ship with the app.</p>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="sec-head"><div class="num">08</div><h2>Contact</h2></div>
+    <p>Questions about privacy? Reach us through the <a href="support.html" style="color:var(--indigo);font-weight:600">Support</a> page.</p>
+  </section>
+
+  <footer class="foot">
+    <nav><a class="on" href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="support.html">Support</a></nav>
+    © 2026 Wopezi · All processing stays on your device
+  </footer>
+</div>
+</body>
+</html>
